@@ -1,0 +1,226 @@
+
+/* 1. Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202020;
+    color: #1b0b3b;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* 2. Navbar */
+.navbar {
+    min-height: 63px;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 22px;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #777487;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.login-btn {
+    color: #4242b5;
+    border: 1.5px solid #4242b5;
+    border-radius: 30px;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* 3. Hero layout */
+.hero {
+    background-color: #fff;
+    min-height: calc(100vh - 103px);
+    padding: 74px 9%;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.25;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #51456c;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* 4. Sign in button */
+.signin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 168px;
+    padding: 10px 12px 10px 42px;
+    border-radius: 30px;
+    background-color: #4242b5;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: 0 2px 3px #0003;
+}
+
+.arrow {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #7777cf;
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* Gallery layout */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+/* Main image */
+.gallery-main {
+    width: 100%;
+    aspect-ratio: 1.7 / 1;
+    height: auto;
+}
+
+/* Two bottom images */
+.gallery-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 12px;
+}
+
+.gallery-bottom img {
+    width: 100%;
+    aspect-ratio: 1.12 / 1;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* 6. Tablet and mobile */
+@media (max-width: 850px) {
+    body {
+        padding: 12px;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 45px 6%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        max-width: 550px;
+    }
+
+    .gallery-main {
+        height: clamp(190px, 45vw, 320px);
+    }
+
+    .gallery-bottom img {
+        height: clamp(120px, 28vw, 200px);
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 0;
+    }
+
+    .navbar {
+        gap: 14px;
+        padding: 16px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .login-btn {
+        padding: 8px 12px;
+    }
+
+    .hero {
+        padding: 38px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    .gallery-bottom {
+        gap: 8px;
+    }
+
+    .gallery-bottom img {
+        height: 120px;
+    }
+}
