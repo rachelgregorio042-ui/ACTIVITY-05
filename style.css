@@ -224,3 +224,50 @@ body {
         height: 120px;
     }
 }
+
+/* 7. Interactive states */
+
+/* Navigation hover */
+.nav-links a {
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4242b5;
+}
+
+/* Logo hover */
+.logo {
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+/* Login button hover */
+.login-btn {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4242b5;
+    color: #fff;
+}
+
+/* Sign-in button hover */
+.signin-btn {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.signin-btn:hover {
+    background-color: #30308f;
+    transform: translateY(-2px);
+}
+
+/* Keyboard accessibility */
+.navbar a:focus-visible,
+.signin-btn:focus-visible {
+    outline: 3px solid #ff9f43;
+    outline-offset: 4px;
+}
